@@ -22,35 +22,39 @@
               <div class="card-body p-md-2 mx-md-4">
 
                 <div class="text-center">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                    style="width: 185px;" alt="logo">
-                  <h4 class="mt-1 mb-2 pb-1">Bienvenidos</h4>
+                  <!--<img src="img/logo.png"
+                    style="width: 120px;" alt="logo">-->
+                  <h3 class="mt-4 mb-5 pb-1">Bienvenidos</h3>
                 </div>
 
-                <form>
-                  <p>Ingrese sus datos para iniciar sesion</p>
-
+                <form name="login" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+                  
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control"
+                    <input name="usuario" type="email" id="form2Example11" class="form-control"
                       placeholder="Usuario" />
                   </div>
 
                   <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" placeholder="Contraseña" />
+                    <input name="password" type="password" id="form2Example22" class="form-control" placeholder="Contraseña" />
                     
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">
-                        Iniciar Sesion</button>
-                
+                    <button onclick="login.submit()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">
+                        Iniciar Sesion
+                    </button>
+                    <?php if(!empty($errores)) :?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo $errores;?>
+                        </div>    
+                    <?php endif; ?>
                   </div>
-
+                  
                   <div class="d-flex align-items-center justify-content-center pb-4 ">
                     <p class="mb-0 me-2">¿Aún no tiene cuenta?</p>
                     <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger">Crear Cuenta</button>
                   </div>
-
+                    
                 </form>
 
               </div>
