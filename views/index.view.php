@@ -79,7 +79,7 @@
                 </a>
                 </div>
                 <div class="col-auto d-lg-block">
-                    <img src="img/<?php echo $post['thumb']  ?>" class="bd-placeholder-img" width="250" height="100%" aria-label="Imagen" alt="Imagen">
+                    <img src="imagenes/<?php echo $post['thumb']  ?>" class="bd-placeholder-img" width="250" height="100%" aria-label="Imagen" alt="Imagen">
                 </div>
             </div>
         </div>

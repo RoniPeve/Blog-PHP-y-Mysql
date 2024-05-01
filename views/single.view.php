@@ -25,7 +25,7 @@
         <p><?php echo $post['extracto'] ?></p>
         <hr>
         <div class="text-center">
-                <img src="img/<?php echo $post['thumb'] ?>" class="bd-placeholder-img" width="100%" aria-label="Imagen" alt="Imagen">
+                <img src="imagenes/<?php echo $post['thumb'] ?>" class="bd-placeholder-img" width="100%" aria-label="Imagen" alt="Imagen">
         </div>
         <p><?php echo nl2br($post['texto']); ?></p>
         <h2>Blockquotes</h2>

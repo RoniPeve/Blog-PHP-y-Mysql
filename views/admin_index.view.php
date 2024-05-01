@@ -15,6 +15,11 @@
       <h3 class="pb-4 mb-4 fst-italic border-bottom">
         Panel de Administracion
       </h3>
+      <div class="d-flex mt-2 mb-4">
+            <a href="nuevo.php" class="me-2 btn btn-secondary"><i class="fas fa-plus"></i> Nuevo</a>
+            <a href="cerrar.php" class="me-2 btn btn-secondary""><i class="fas fa-sign-out-alt"></i> Cerrar Sesion</a>
+        </div>
+      
       <?php foreach($posts as $post)  : ?>
        <article class="blog-post">
         <div class="col-md-12">
@@ -24,14 +29,14 @@
                 <h3 class="mb-0"><?php echo $post['id'] . '. - ' .$post['titulo'];  ?></h3>
                 <div class="mb-1 text-body-secondary"><?php echo $post['fecha']  ?></div>
                 <p class="mb-auto"><?php echo $post['extracto']  ?></p>
-                <div class="d-flex mt-2">
-                            <a href="#" class="me-2 btn btn-secondary"><i class="fas fa-edit"></i> Editar</a>
-                            <a href="#" class="me-2 btn btn-secondary""><i <i class="fa fa-folder-open" ></i> Ver</a>
-                            <a href="#" class="me-2 btn btn-secondary""><i class="fa fa-trash"></i>  Borrar</a>
+                    <div class="d-flex mt-2">
+                            <a href="editar.php?id=<?php echo $post['id']; ?>" class="me-2 btn btn-secondary"><i class="fas fa-edit"></i> Editar</a>
+                            <a href="../single.php?id=<?php echo $post['id']; ?>" class="me-2 btn btn-secondary""><i class="fas fa-folder-open"></i> Ver</a>
+                            <a href="borrar.php?id=<?php echo $post['id']; ?>" class="me-2 btn btn-secondary""><i class="fas fa-trash"></i> Borrar</a>
                     </div>
                 </div>
-                <div class="col-auto d-lg-block">
-                    <img src="../img/<?php echo $post['thumb']  ?>" class="bd-placeholder-img" width="250" height="100%" aria-label="Imagen" alt="Imagen">
+                <div class="col-auto d-lg-block d-none">
+                    <img src="../imagenes/<?php echo $post['thumb']  ?>" class="bd-placeholder-img" width="250" height="100%" aria-label="Imagen" alt="Imagen">
                 </div>
             </div>
         </div>
