@@ -36,7 +36,7 @@
           </a>
         </div>
         <div class="col-auto d-lg-block">
-                <img src="img/1.jpg" class="bd-placeholder-img" width="220" height="100%" aria-label="Imagen" alt="Imagen">
+                <img src="imagenes/1.jpg" class="bd-placeholder-img" width="220" height="100%" aria-label="Imagen" alt="Imagen">
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@
           </a>
         </div>
         <div class="col-auto d-lg-block">
-                <img src="img/1.jpg" class="bd-placeholder-img" width="220" height="100%" aria-label="Imagen" alt="Imagen">
+                <img src="imagenes/1.jpg" class="bd-placeholder-img" width="220" height="100%" aria-label="Imagen" alt="Imagen">
         </div>
       </div>
     </div>

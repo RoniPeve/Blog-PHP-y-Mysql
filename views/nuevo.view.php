@@ -18,6 +18,7 @@
       <div class="card  mb-4">
         <div class="card-body">
         <form  method="POST" enctype="multipart/form-data"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+            
             <div class="mb-3">
                 <label for="titulo" class="form-label">Titulo</label>
                 <input name="titulo" type="text" class="form-control" id="titulo" placeholder="Ingrese el titulo">
@@ -36,9 +37,10 @@
             <div class="mb-3">
                 <label for="thumb" class="form-label">Sube la imagen del Articulo</label>
                 <input name="thumb" type="file" class="form-control" id="thumb">
+
                 
             </div>
-            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            <button type="submit" class="btn btn-primary mt-4">Guardar Articulo</button>
             </form>
         </div>
       </div>

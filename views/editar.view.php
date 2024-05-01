@@ -18,27 +18,28 @@
       <div class="card  mb-4">
         <div class="card-body">
         <form  method="POST" enctype="multipart/form-data"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+            <input name="id" type="hidden" value="<?php echo $post['id']; ?>">
             <div class="mb-3">
                 <label for="titulo" class="form-label">Titulo</label>
-                <input name="titulo" type="text" class="form-control" id="titulo" placeholder="Ingrese el titulo">
+                <input name="titulo" type="text" class="form-control" id="titulo" value="<?php echo $post['titulo']; ?>">
                 
             </div>
             <div class="mb-3">
                 <label for="extracto" class="form-label">Descripcion Corta</label>
-                <input name="extracto" type="text" class="form-control" id="extracto" placeholder="Ingrese la descripcion corta">
+                <input name="extracto" type="text" class="form-control" id="extracto" value="<?php echo $post['extracto']; ?>">
                 
             </div>
             <label for="texto" class="form-label">Descripcion</label>
             <div class="form-floating">
-            <textarea class="form-control" name="texto" id="floatingTextarea2" style="height: 200px"></textarea>
+            <textarea class="form-control" name="texto" id="floatingTextarea2" style="height: 200px"><?php echo $post['texto']; ?>"</textarea>
             <label for="floatingTextarea2">Descripcion</label>
             </div>
             <div class="mb-3">
                 <label for="thumb" class="form-label">Sube la imagen del Articulo</label>
                 <input name="thumb" type="file" class="form-control" id="thumb">
-                
+                <input type="hidden" name="thumb-guardada">
             </div>
-            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            <button type="submit" class="btn btn-primary mt-4">Modificar Articulo</button>
             </form>
         </div>
       </div>
